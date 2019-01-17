@@ -16,10 +16,11 @@
       .then(checkStatus)
       .then(parseJSON)
       .then(res => {
-        document.write(res)
+        document.write(JSON.stringify(res))
       })
   }, 3000)
 
+  var a = {a:3}
 
   function checkStatus(response) {
     if (response.status >= 200 && response.status < 300) {
